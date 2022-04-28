@@ -78,6 +78,8 @@ header .wrapCity {
   padding: 10px;
   border-radius: 20px;
   border: 0;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 10px -2px #000000;
           box-shadow: 0px 0px 10px -2px #000000;
@@ -85,6 +87,11 @@ header .wrapCity {
   background: #362730;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(17%, #5f1742), color-stop(60%, #d63d9e));
   background: linear-gradient(0deg, #5f1742 17%, #d63d9e 60%);
+}
+
+.content .headDescription button:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .content .headMenu {
@@ -164,6 +171,10 @@ header .wrapCity {
           flex-direction: column;
 }
 
+.content .restaurants h2 {
+  margin-bottom: 20px;
+}
+
 .content .restaurants .wrapCards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,9 +196,14 @@ header .wrapCity {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5px;
-  width: 45%;
+  width: 48%;
   margin-bottom: 20px;
+  border-radius: 15px;
   background-color: #e8edea;
+  -webkit-box-shadow: 0px 0px 10px -5px #000000;
+          box-shadow: 0px 0px 10px -5px #000000;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
 
 .content .restaurants .wrapCards .card img {
@@ -201,9 +217,96 @@ header .wrapCity {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 10px 10px;
+}
+
+.content .restaurants .wrapCards .card .cardDescription .cardText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.content .restaurants .wrapCards .card .cardDescription .cardText h3 {
+  font-size: 1.1rem;
+}
+
+.content .restaurants .wrapCards .card .cardDescription .cardText p {
+  font-size: 0.9rem;
+}
+
+.content .restaurants .wrapCards .card .cardDescription i {
+  font-size: 2rem;
+}
+
+.content .restaurants .wrapCards .card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+footer {
+  background-color: #353535;
+  color: #fff;
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+
+footer img,
+footer .wrapFooterItems {
+  margin: 0 10%;
+}
+
+footer img {
+  padding: 15px 5px;
+}
+
+footer .wrapFooterItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+footer .wrapFooterItems .footerItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  -webkit-transform: translate(20px);
+          transform: translate(20px);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+footer .wrapFooterItems .footerItem i {
+  position: absolute;
+  left: -25px;
+  font-size: 0.9rem;
+}
+
+footer .wrapFooterItems .footerItem p {
+  font-size: 0.9rem;
+}
+
+footer .wrapFooterItems .footerItem:hover {
+  cursor: pointer;
+  color: #db43a3;
 }
 /*# sourceMappingURL=style.css.map */
