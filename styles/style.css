@@ -6,4 +6,204 @@
           box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header img {
+  width: 150px;
+  margin: 20px 0;
+}
+
+header .wrapCity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #e8edea;
+  -webkit-box-shadow: inset 0px 0px 12px -10px #000000;
+          box-shadow: inset 0px 0px 12px -10px #000000;
+}
+
+.content {
+  margin: 0 10%;
+}
+
+.content h2 {
+  font-size: 1.25rem;
+}
+
+.content .headDescription {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.content .headDescription button {
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px -2px #000000;
+          box-shadow: 0px 0px 10px -2px #000000;
+  color: #fff;
+  background: #362730;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(17%, #5f1742), color-stop(60%, #d63d9e));
+  background: linear-gradient(0deg, #5f1742 17%, #d63d9e 60%);
+}
+
+.content .headMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.content .headMenu h2 {
+  margin-bottom: 20px;
+}
+
+.content .headMenu .wrapMenuItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .headMenu .wrapMenuItems .menuItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  background-color: #e8edea;
+  -webkit-box-shadow: 0px 0px 10px -5px #000000;
+          box-shadow: 0px 0px 10px -5px #000000;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.content .headMenu .wrapMenuItems .menuItem i,
+.content .headMenu .wrapMenuItems .menuItem p {
+  margin-left: 10px;
+}
+
+.content .headMenu .wrapMenuItems .menuItem span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #db43a3;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.content .restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .restaurants .wrapCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+}
+
+.content .restaurants .wrapCards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  width: 45%;
+  margin-bottom: 20px;
+  background-color: #e8edea;
+}
+
+.content .restaurants .wrapCards .card img {
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+}
+
+.content .restaurants .wrapCards .card .cardDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 /*# sourceMappingURL=style.css.map */

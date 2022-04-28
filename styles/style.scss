@@ -1,14 +1,158 @@
-$purple: #DB43A3;
-$darkPurple: #AB2178;
-$grey: #E8EDEA;
-$darkGrey: #C6D2CB;
+$purple: #db43a3;
+$darkPurple: #ab2178;
+$grey: #e8edea;
+$darkGrey: #c6d2cb;
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 150px;
+    margin: 20px 0;
+  }
+
+  .wrapCity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: $grey;
+    box-shadow: inset 0px 0px 12px -10px #000000;
+  }
+}
+
+.content {
+  margin: 0 10%;
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .headDescription {
+    margin: 15px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      font-weight: 700;
+      padding: 10px;
+      border-radius: 20px;
+      border: 0;
+
+      cursor: pointer;
+
+      box-shadow: 0px 0px 10px -2px #000000;
+      color: #fff;
+      background: rgb(54, 39, 48);
+      background: linear-gradient(
+        0deg,
+        rgb(95, 23, 66) 17%,
+        rgb(214, 61, 158) 60%
+      );
+    }
+  }
+
+  .headMenu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .wrapMenuItems {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+      align-items: center;
+
+      .menuItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 30%;
+
+        background-color: $grey;
+        box-shadow: 0px 0px 10px -5px #000000;
+
+        padding: 10px;
+        border-radius: 15px;
+
+        i,
+        p {
+          margin-left: 10px;
+        }
+
+        span {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $purple;
+
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+
+    .wrapCards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 5px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 45%;
+        margin-bottom: 20px;
+        background-color: $grey;
+
+        img {
+          border-radius: 15px 15px 0 0;
+          object-fit: cover;
+          height: 200px;
+        }
+
+        .cardDescription {
+          display: flex;
+          margin-left: 10px;
+
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
