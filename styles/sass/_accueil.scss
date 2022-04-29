@@ -1,0 +1,191 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 150px;
+    margin: 20px 0;
+  }
+
+  .wrapCity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: $grey;
+    box-shadow: inset 0px 0px 12px -10px #000000;
+  }
+}
+
+.content {
+  margin: 0 10%;
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .headDescription {
+    margin: 15px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    button {
+      font-weight: 700;
+      padding: 10px;
+      border-radius: 20px;
+      border: 0;
+
+      transition: ease-in-out 0.2s;
+      cursor: pointer;
+
+      box-shadow: 0px 0px 10px -2px #000000;
+      color: #fff;
+      background: linear-gradient(to bottom, $secondary 5%, $primary 100%);
+    }
+
+    button:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .headMenu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .wrapMenuItems {
+      display: flex;
+      flex-direction: column;
+
+      gap: 20px;
+      justify-content: space-around;
+      align-items: center;
+
+      .menuItem {
+        display: flex;
+
+        align-items: center;
+
+        width: 100%;
+
+        background-color: $grey;
+        box-shadow: 0px 0px 10px -5px #000000;
+
+        padding: 10px;
+        border-radius: 15px;
+
+        i,
+        p {
+          margin-left: 10px;
+        }
+
+        span {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $primary;
+
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+          left: -20px;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .wrapCards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 5px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 15px;
+
+        background-color: $grey;
+        box-shadow: 0px 0px 10px -5px #000000;
+        transition: ease-in-out 0.3s;
+
+        img {
+          border-radius: 15px 15px 0 0;
+          object-fit: cover;
+          height: 200px;
+        }
+
+        .cardDescription {
+          display: flex;
+          justify-content: space-between;
+
+          margin: 10px 10px;
+
+          .cardText {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
+
+          i {
+            font-size: 2rem;
+          }
+        }
+
+        @media (min-width: 1000px) {
+          width: 48%;
+        }
+      }
+
+      .card:hover {
+        transform: scale(1.02);
+      }
+
+      @media (min-width: 1000px) {
+        flex-direction: row;
+      }
+    }
+  }
+}
