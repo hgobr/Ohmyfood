@@ -1,0 +1,136 @@
+.menu01 {
+  header {
+    i {
+      position: absolute;
+      left: 5%;
+      top: 23px;
+      font-size: 1.3rem;
+      transition: ease-in-out 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  section {
+    margin: 0;
+
+    img {
+      height: 350px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .headMenu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: -55px;
+
+    h1 {
+      font-size: 1.5rem;
+      align-self: flex-start;
+      margin-bottom: 30px;
+    }
+
+    i {
+      position: relative;
+      left: 48%;
+      bottom: 60px;
+
+      font-size: 2rem;
+    }
+
+    background-color: $grey;
+
+    margin: 0 10%;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+
+    button {
+      font-weight: 700;
+      padding: 10px;
+      margin-top: 35px;
+      border-radius: 20px;
+      border: 0;
+      width: 15%;
+
+      transition: ease-in-out 0.2s;
+      cursor: pointer;
+
+      box-shadow: 0px 0px 10px -2px #000000;
+      color: #fff;
+      background: linear-gradient(to bottom, $secondary 5%, $primary 100%);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .menuList {
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      justify-content: space-between;
+
+      .menuWrap {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+
+        h2 {
+          margin-bottom: 5px;
+
+          &::after {
+            content: '';
+            display: block;
+
+            width: 55px;
+            border-bottom: 5px solid #92d8c7;
+            padding-top: 2px;
+          }
+        }
+
+        .menuDesc {
+          @keyframes slide {
+            0% {
+              transform: translateY(-40%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 100%;
+            }
+          }
+
+          animation: 1s ease-in-out 0s 1 slide;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          background-color: #fff;
+          box-shadow: 0px 0px 10px -2px #000000;
+          padding: 12px;
+          border-radius: 10px;
+
+          .menuText {
+            p:nth-of-type(1) {
+              font-weight: bold;
+            }
+          }
+
+          .menuSpan {
+            position: relative;
+            top: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

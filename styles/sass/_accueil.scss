@@ -52,10 +52,10 @@ header {
       box-shadow: 0px 0px 10px -2px #000000;
       color: #fff;
       background: linear-gradient(to bottom, $secondary 5%, $primary 100%);
-    }
 
-    button:hover {
-      transform: scale(1.03);
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 

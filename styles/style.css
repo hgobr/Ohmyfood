@@ -100,7 +100,7 @@ header .wrapCity {
   background: linear-gradient(to bottom, #ff79da 5%, #9356dc 100%);
 }
 .content .headDescription button:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 .content .headMenu {
   display: flex;
@@ -207,6 +207,113 @@ header .wrapCity {
   .content .restaurants .wrapCards {
     flex-direction: row;
   }
+}
+
+.menu01 header i {
+  position: absolute;
+  left: 5%;
+  top: 23px;
+  font-size: 1.3rem;
+  transition: ease-in-out 0.2s;
+}
+.menu01 header i:hover {
+  transform: scale(1.1);
+}
+.menu01 section {
+  margin: 0;
+}
+.menu01 section img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+.menu01 .headMenu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: -55px;
+  background-color: #e8edea;
+  margin: 0 10%;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+}
+.menu01 .headMenu h1 {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  margin-bottom: 30px;
+}
+.menu01 .headMenu i {
+  position: relative;
+  left: 48%;
+  bottom: 60px;
+  font-size: 2rem;
+}
+.menu01 .headMenu button {
+  font-weight: 700;
+  padding: 10px;
+  margin-top: 35px;
+  border-radius: 20px;
+  border: 0;
+  width: 15%;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px -2px #000000;
+  color: #fff;
+  background: linear-gradient(to bottom, #ff79da 5%, #9356dc 100%);
+}
+.menu01 .headMenu button:hover {
+  transform: scale(1.05);
+}
+.menu01 .headMenu .menuList {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+}
+.menu01 .headMenu .menuList .menuWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+.menu01 .headMenu .menuList .menuWrap h2 {
+  margin-bottom: 5px;
+}
+.menu01 .headMenu .menuList .menuWrap h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  border-bottom: 5px solid #92d8c7;
+  padding-top: 2px;
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc {
+  animation: 1s ease-in-out 0s 1 slide;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px -2px #000000;
+  padding: 12px;
+  border-radius: 10px;
+}
+@keyframes slide {
+  0% {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuText p:nth-of-type(1) {
+  font-weight: bold;
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuSpan {
+  position: relative;
+  top: 20px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
