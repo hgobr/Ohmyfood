@@ -4,9 +4,15 @@ header {
   align-items: center;
   justify-content: center;
 
-  img {
-    width: 150px;
-    margin: 20px 0;
+  .headerLogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 150px;
+      margin: 20px 0;
+    }
   }
 
   .wrapCity {
@@ -18,8 +24,9 @@ header {
     gap: 10px;
     width: 100%;
     padding: 10px 0;
-    background-color: $grey;
-    box-shadow: inset 0px 0px 12px -10px #000000;
+
+    background-color: #f5f3f3;
+    box-shadow: inset 0px 5px 9px 1px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -152,6 +159,7 @@ header {
         .cardDescription {
           display: flex;
           justify-content: space-between;
+          position: relative;
 
           margin: 10px 10px;
 
@@ -171,6 +179,25 @@ header {
 
           i {
             font-size: 2rem;
+          }
+
+          .fa-solid {
+            position: absolute;
+            right: 0;
+            opacity: 0;
+
+            color: transparent;
+            transition: ease-in-out 0.3s;
+            transform: scale(1.1);
+
+            background: radial-gradient(circle, #9356dc 0%, #ff79da 100%);
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            &:hover {
+              opacity: 1;
+            }
           }
         }
 

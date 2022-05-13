@@ -57,7 +57,12 @@ header {
   align-items: center;
   justify-content: center;
 }
-header img {
+header .headerLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .headerLogo img {
   width: 150px;
   margin: 20px 0;
 }
@@ -69,8 +74,8 @@ header .wrapCity {
   gap: 10px;
   width: 100%;
   padding: 10px 0;
-  background-color: #e8edea;
-  box-shadow: inset 0px 0px 12px -10px #000000;
+  background-color: #f5f3f3;
+  box-shadow: inset 0px 5px 9px 1px rgba(0, 0, 0, 0.1);
 }
 
 .content {
@@ -179,6 +184,7 @@ header .wrapCity {
 .content .restaurants .wrapCards .card .cardDescription {
   display: flex;
   justify-content: space-between;
+  position: relative;
   margin: 10px 10px;
 }
 .content .restaurants .wrapCards .card .cardDescription .cardText {
@@ -194,6 +200,20 @@ header .wrapCity {
 }
 .content .restaurants .wrapCards .card .cardDescription i {
   font-size: 2rem;
+}
+.content .restaurants .wrapCards .card .cardDescription .fa-solid {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  color: transparent;
+  transition: ease-in-out 0.3s;
+  transform: scale(1.1);
+  background: radial-gradient(circle, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.content .restaurants .wrapCards .card .cardDescription .fa-solid:hover {
+  opacity: 1;
 }
 @media (min-width: 1000px) {
   .content .restaurants .wrapCards .card {
@@ -229,7 +249,7 @@ header .wrapCity {
 }
 .menu01 .headMenu {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
   flex-direction: column;
   position: relative;
   top: -55px;
@@ -238,16 +258,32 @@ header .wrapCity {
   padding: 20px;
   border-radius: 20px 20px 0 0;
 }
+.menu01 .headMenu .headTitle {
+  display: flex;
+  justify-content: space-between;
+}
+.menu01 .headMenu .headTitle i {
+  position: relative;
+  font-size: 2rem;
+}
+.menu01 .headMenu .headTitle .fa-solid {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  opacity: 0;
+  color: transparent;
+  transition: ease-in-out 0.3s;
+  transform: scale(1.1);
+  background: radial-gradient(circle, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu01 .headMenu .headTitle .fa-solid:hover {
+  opacity: 1;
+}
 .menu01 .headMenu h1 {
   font-size: 1.5rem;
-  align-self: flex-start;
   margin-bottom: 30px;
-}
-.menu01 .headMenu i {
-  position: relative;
-  left: 48%;
-  bottom: 60px;
-  font-size: 2rem;
 }
 .menu01 .headMenu button {
   font-weight: 700;
@@ -256,6 +292,7 @@ header .wrapCity {
   border-radius: 20px;
   border: 0;
   width: 15%;
+  align-self: center;
   transition: ease-in-out 0.2s;
   cursor: pointer;
   box-shadow: 0px 0px 10px -2px #000000;
@@ -270,6 +307,12 @@ header .wrapCity {
   width: 100%;
   gap: 20px;
   justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 1000px) {
+  .menu01 .headMenu .menuList {
+    flex-direction: row;
+  }
 }
 .menu01 .headMenu .menuList .menuWrap {
   display: flex;
@@ -311,7 +354,6 @@ header .wrapCity {
   font-weight: bold;
 }
 .menu01 .headMenu .menuList .menuWrap .menuDesc .menuSpan {
-  position: relative;
   top: 20px;
   font-weight: bold;
 }
