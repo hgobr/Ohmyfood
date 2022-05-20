@@ -130,6 +130,7 @@ header .wrapCity {
   box-shadow: 0px 0px 10px -5px #000000;
   padding: 10px;
   border-radius: 15px;
+  transition: ease-in-out 0.3s;
 }
 .content .headMenu .wrapMenuItems .menuItem i,
 .content .headMenu .wrapMenuItems .menuItem p {
@@ -145,6 +146,12 @@ header .wrapCity {
   width: 25px;
   border-radius: 50%;
   left: -20px;
+}
+.content .headMenu .wrapMenuItems .menuItem:hover {
+  transform: scale(1.02);
+}
+.content .headMenu .wrapMenuItems .menuItem:hover .fa-solid {
+  color: #9356dc;
 }
 @media (min-width: 1000px) {
   .content .headMenu .wrapMenuItems {
@@ -335,9 +342,10 @@ header .wrapCity {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
   background-color: #fff;
   box-shadow: 0px 0px 10px -2px #000000;
-  padding: 12px;
   border-radius: 10px;
 }
 @keyframes slide {
@@ -350,12 +358,117 @@ header .wrapCity {
     opacity: 100%;
   }
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuText p:nth-of-type(1) {
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup:hover + .menuSelection {
+  margin-right: 0;
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup:hover + .menuSelection i {
+  transform: rotate(0);
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText {
+  overflow: hidden;
+  width: -webkit-fill-available;
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText p:nth-of-type(1) {
   font-weight: bold;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuSpan {
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuSpan {
   top: 20px;
   font-weight: bold;
+  position: relative;
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuSelection {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  background-color: #88c9b8;
+  width: 4rem;
+  margin-right: -4rem;
+  flex-shrink: 0;
+  border-radius: 0 10px 10px 0;
+}
+.menu01 .headMenu .menuList .menuWrap .menuDesc .menuSelection i {
+  transition: ease-in-out 0.3s;
+  transform: rotate(-250deg);
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: rgba(53, 53, 53, 0.6784313725);
+  animation: load 2s forwards;
+  animation-delay: 2s;
+}
+@keyframes load {
+  0% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 0;
+  }
+  95% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.loader .ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loader .ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #9356dc;
+  border-radius: 50%;
+  animation: ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #9356dc transparent transparent transparent;
+}
+.loader .ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loader .ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loader .ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

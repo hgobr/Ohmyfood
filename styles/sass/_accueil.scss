@@ -96,6 +96,8 @@ header {
         padding: 10px;
         border-radius: 15px;
 
+        transition: ease-in-out 0.3s;
+
         i,
         p {
           margin-left: 10px;
@@ -113,6 +115,13 @@ header {
           width: 25px;
           border-radius: 50%;
           left: -20px;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+          .fa-solid {
+            color: #9356dc;
+          }
         }
       }
 
