@@ -47,6 +47,7 @@
         opacity: 0;
 
         color: transparent;
+        cursor: pointer;
         transition: ease-in-out 0.3s;
         transform: scale(1.1);
 
@@ -95,21 +96,23 @@
     }
 
     .menuList {
-      display: flex;
-      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: stretch;
+
       gap: 20px;
       justify-content: space-between;
       flex-direction: column;
 
       @media (min-width: 1000px) {
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr 1fr;
       }
 
       .menuWrap {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+
         gap: 15px;
-        width: 100%;
 
         h2 {
           margin-bottom: 5px;
@@ -125,6 +128,12 @@
         }
 
         .menuDesc {
+          @for $i from 1 through 3 {
+            &:nth-child(#{$i + 1}) {
+              animation-delay: 150ms * $i;
+            }
+          }
+
           @keyframes slide {
             0% {
               transform: translateY(-40%);
@@ -137,6 +146,7 @@
           }
 
           animation: 1s ease-in-out 0s 1 slide;
+          animation-fill-mode: both;
 
           display: flex;
           flex-direction: row;
@@ -180,10 +190,9 @@
             }
 
             .menuSpan {
-              top: 20px;
               font-weight: bold;
-
               position: relative;
+              top: 20px;
             }
           }
 
