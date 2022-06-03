@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch styles/style.scss styles/style.css",
-    "prefix": "postcss styles/style.css -u autoprefixer -o styles/stylemain.css"
+    "prefix": "postcss styles/style.css -u autoprefixer -o styles/styleprefix.css",
+    "build": "postcss styles/style.css -u autoprefixer cssnano -o styles/stylemain.css"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.10",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0"
   }
