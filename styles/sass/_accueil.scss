@@ -183,22 +183,7 @@ header {
           }
 
           .fa-solid {
-            position: absolute;
-            right: 0;
-            opacity: 0;
-
-            color: transparent;
-            transition: ease-in-out 0.3s;
-            transform: scale(1.1);
-
-            background: radial-gradient(circle, #9356dc 0%, #ff79da 100%);
-
-            -webkit-background-clip: text;
-            background-clip: text;
-
-            &:hover {
-              opacity: 1;
-            }
+            @include heartHover;
           }
         }
 
