@@ -175,6 +175,19 @@ header .wrapCity {
   flex-direction: column;
   gap: 5px;
 }
+.content .restaurants .wrapCards .new {
+  position: relative;
+}
+.content .restaurants .wrapCards .new::before {
+  position: absolute;
+  content: "Nouveau";
+  background-color: #99e2d0;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  color: #1b6150;
+}
 .content .restaurants .wrapCards .card {
   display: flex;
   flex-direction: column;

@@ -135,6 +135,21 @@ header {
       flex-direction: column;
       gap: 5px;
 
+      .new {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: 'Nouveau';
+          background-color: var.$turquoise;
+          right: 1rem;
+          top: 1rem;
+          padding: 0.5rem;
+          border-radius: 3px;
+          color: darken(var.$turquoise, 50%);
+        }
+      }
+
       .card {
         display: flex;
         flex-direction: column;
