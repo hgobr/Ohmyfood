@@ -1,3 +1,6 @@
+@import './mixin';
+@import './animations';
+
 .menu01 {
   header {
     i {
@@ -75,24 +78,7 @@
     border-radius: 20px 20px 0 0;
 
     button {
-      font-weight: 700;
-      padding: 10px;
-      margin-top: 35px;
-      border-radius: 20px;
-      border: 0;
-      width: 150px;
-      align-self: center;
-
-      transition: ease-in-out 0.2s;
-      cursor: pointer;
-
-      box-shadow: 0px 0px 10px -2px #000000;
-      color: #fff;
-      background: linear-gradient(to bottom, $secondary 5%, $primary 100%);
-
-      &:hover {
-        transform: scale(1.05);
-      }
+      @include mainButton;
     }
 
     .menuList {
@@ -103,6 +89,7 @@
       gap: 20px;
       justify-content: space-between;
       flex-direction: column;
+      margin-bottom: 10px;
 
       @media (min-width: 1000px) {
         grid-template-columns: 1fr 1fr 1fr;
@@ -128,25 +115,7 @@
         }
 
         .menuDesc {
-          @for $i from 1 through 3 {
-            &:nth-child(#{$i + 1}) {
-              animation-delay: 150ms * $i;
-            }
-          }
-
-          @keyframes slide {
-            0% {
-              transform: translateY(-40%);
-              opacity: 0;
-            }
-            100% {
-              transform: translateX(0);
-              opacity: 100%;
-            }
-          }
-
-          animation: 1s ease-in-out 0s 1 slide;
-          animation-fill-mode: both;
+          @include menuCardAnimation;
 
           display: flex;
           flex-direction: row;

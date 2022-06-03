@@ -1,0 +1,21 @@
+@mixin menuCardAnimation {
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i + 1}) {
+      animation-delay: 150ms * $i;
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(-40%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+  }
+
+  animation: 1s ease-in-out 0s 1 slide;
+  animation-fill-mode: both;
+}
