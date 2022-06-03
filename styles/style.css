@@ -431,8 +431,8 @@ header .wrapCity {
   align-items: center;
   z-index: 1;
   background-color: rgba(53, 53, 53, 0.6784313725);
-  animation: load 2s forwards;
-  animation-delay: 2s;
+  animation: load 1.5s forwards;
+  animation-delay: 1.5s;
 }
 @keyframes load {
   0% {
