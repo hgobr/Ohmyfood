@@ -1,3 +1,5 @@
+@use './variables' as var;
+
 @mixin mainButton {
   font-weight: 700;
   padding: 12px 20px;
@@ -12,7 +14,7 @@
 
   box-shadow: 0px 0px 10px -2px #000000;
   color: #fff;
-  background: linear-gradient(to bottom, $secondary 5%, $primary 100%);
+  background: linear-gradient(to bottom, var.$secondary 5%, var.$primary 100%);
 
   &:hover {
     transform: scale(1.05);
@@ -36,4 +38,8 @@
   &:hover {
     opacity: 1;
   }
+}
+
+@mixin boxShadow {
+  box-shadow: 0px 0px 10px -5px #000000;
 }

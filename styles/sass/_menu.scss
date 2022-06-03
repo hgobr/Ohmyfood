@@ -1,5 +1,6 @@
-@import './mixin';
-@import './animations';
+@use './mixin';
+@use './animations';
+@use './variables' as var;
 
 .menu01 {
   header {
@@ -44,7 +45,7 @@
       }
 
       .fa-solid {
-        @include heartHover;
+        @include mixin.heartHover;
         margin-right: 20px;
       }
     }
@@ -55,14 +56,14 @@
       margin-bottom: 30px;
     }
 
-    background-color: $grey;
+    background-color: var.$grey;
 
     margin: 0 10%;
     padding: 20px;
     border-radius: 20px 20px 0 0;
 
     button {
-      @include mainButton;
+      @include mixin.mainButton;
     }
 
     .menuList {
@@ -99,7 +100,7 @@
         }
 
         .menuDesc {
-          @include menuCardAnimation;
+          @include animations.menuCardAnimation;
 
           display: flex;
           flex-direction: row;

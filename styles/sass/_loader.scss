@@ -1,3 +1,5 @@
+@use './variables' as var;
+
 .loader {
   position: absolute;
   width: 100%;
@@ -47,10 +49,10 @@
       width: 64px;
       height: 64px;
       margin: 8px;
-      border: 8px solid $primary;
+      border: 8px solid var.$primary;
       border-radius: 50%;
       animation: ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-      border-color: $primary transparent transparent transparent;
+      border-color: var.$primary transparent transparent transparent;
     }
 
     div:nth-child(1) {
