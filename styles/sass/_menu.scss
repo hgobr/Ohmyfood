@@ -17,157 +17,165 @@
     }
   }
 
-  section {
+  .contentMenu {
     margin: 0;
+
+    @media (max-width: 1000px) {
+      background-color: var.$grey;
+    }
 
     img {
       height: 350px;
       width: 100%;
       object-fit: cover;
     }
-  }
 
-  .headMenu {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    position: relative;
-    top: -55px;
-
-    .headTitle {
+    .headMenu {
       display: flex;
-      justify-content: space-between;
-
-      i {
-        position: relative;
-
-        font-size: 2rem;
-      }
-
-      .fa-solid {
-        @include mixin.heartHover;
-        margin-right: 20px;
-      }
-    }
-
-    h1 {
-      font-size: 1.5rem;
-
-      margin-bottom: 30px;
-    }
-
-    background-color: var.$grey;
-
-    margin: 0 10%;
-    padding: 20px;
-    border-radius: 20px 20px 0 0;
-
-    button {
-      @include mixin.mainButton;
-    }
-
-    .menuList {
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: stretch;
-
-      gap: 20px;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-direction: column;
-      margin-bottom: 10px;
+      position: relative;
+      top: -55px;
 
-      @media (min-width: 1000px) {
-        grid-template-columns: 1fr 1fr 1fr;
+      background-color: var.$grey;
+
+      margin: 0 8%;
+      padding: 20px 15px;
+      border-radius: 20px 20px 0 0;
+
+      @media (max-width: 1000px) {
+        margin: 0;
       }
 
-      .menuWrap {
-        display: grid;
-        grid-template-columns: 1fr;
+      .headTitle {
+        display: flex;
+        justify-content: space-between;
 
-        gap: 15px;
+        i {
+          position: relative;
 
-        h2 {
-          margin-bottom: 5px;
-
-          &::after {
-            content: '';
-            display: block;
-
-            width: 55px;
-            border-bottom: 5px solid #92d8c7;
-            padding-top: 2px;
-          }
+          font-size: 2rem;
         }
 
-        .menuDesc {
-          @include animations.menuCardAnimation;
+        .fa-solid {
+          @include mixin.heartHover;
+          margin-right: 20px;
+        }
+      }
 
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          cursor: pointer;
-          overflow: hidden;
+      h1 {
+        font-size: 1.5rem;
 
-          background-color: #fff;
-          box-shadow: 0px 0px 10px -2px #000000;
+        margin-bottom: 30px;
+      }
 
-          border-radius: 10px;
+      button {
+        @include mixin.mainButton;
+      }
 
-          .menuGroup {
-            overflow: hidden;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 12px;
+      .menuList {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: stretch;
 
-            &:hover + .menuSelection {
-              margin-right: 0;
+        gap: 20px;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 2rem;
 
-              i {
-                transform: rotate(0);
-              }
-            }
+        @media (min-width: 1000px) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
 
-            .menuText {
-              overflow: hidden;
-              width: -webkit-fill-available;
+        .menuWrap {
+          display: grid;
+          grid-template-columns: 1fr;
 
-              p {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-              }
+          gap: 15px;
 
-              p:nth-of-type(1) {
-                font-weight: bold;
-              }
-            }
+          h2 {
+            margin-bottom: 5px;
 
-            .menuSpan {
-              font-weight: bold;
-              position: relative;
-              top: 20px;
+            &::after {
+              content: '';
+              display: block;
+
+              width: 55px;
+              border-bottom: 5px solid #92d8c7;
+              padding-top: 2px;
             }
           }
 
-          .menuSelection {
-            overflow: hidden;
+          .menuDesc {
+            @include animations.menuCardAnimation;
+
             display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.3rem;
-            transition: ease-in-out 0.3s;
+            flex-direction: row;
+            justify-content: space-between;
+            cursor: pointer;
+            overflow: hidden;
 
-            color: #fff;
-            background-color: #88c9b8;
-            width: 4rem;
-            margin-right: -4rem;
-            flex-shrink: 0;
-            border-radius: 0 10px 10px 0;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px -2px #000000;
 
-            i {
+            border-radius: 10px;
+
+            .menuGroup {
+              overflow: hidden;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              padding: 12px;
+
+              &:hover + .menuSelection {
+                margin-right: 0;
+
+                i {
+                  transform: rotate(0);
+                }
+              }
+
+              .menuText {
+                overflow: hidden;
+                width: -webkit-fill-available;
+
+                p {
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+
+                p:nth-of-type(1) {
+                  font-weight: bold;
+                }
+              }
+
+              .menuSpan {
+                font-weight: bold;
+                position: relative;
+                top: 20px;
+              }
+            }
+
+            .menuSelection {
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.3rem;
               transition: ease-in-out 0.3s;
-              transform: rotate(-250deg);
+
+              color: #fff;
+              background-color: #88c9b8;
+              width: 4rem;
+              margin-right: -4rem;
+              flex-shrink: 0;
+              border-radius: 0 10px 10px 0;
+
+              i {
+                transition: ease-in-out 0.3s;
+                transform: rotate(-250deg);
+              }
             }
           }
         }

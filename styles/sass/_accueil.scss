@@ -36,13 +36,17 @@ header {
 .content {
   margin: 0 10%;
 
+  @media (max-width: 1000px) {
+    margin: 0;
+  }
+
   h2 {
     font-size: 1.25rem;
   }
 
   .headDescription {
-    margin: 15px 0;
-
+    padding: 20px;
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,12 +57,23 @@ header {
     button {
       @include mixin.mainButton;
     }
+
+    @media (max-width: 1000px) {
+      background-color: var.$lightGrey;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+    }
   }
 
   .headMenu {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+
+    @media (max-width: 1000px) {
+      margin: 0 8%;
+      margin-bottom: 4rem;
+    }
 
     h2 {
       margin-bottom: 20px;
@@ -124,8 +139,17 @@ header {
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 1000px) {
+      background-color: var.$lightGrey;
+      padding: 3rem 0;
+    }
+
     h2 {
       margin-bottom: 20px;
+
+      @media (max-width: 1000px) {
+        margin-left: 5%;
+      }
     }
 
     .wrapCards {
@@ -210,6 +234,10 @@ header {
 
       @media (min-width: 1000px) {
         flex-direction: row;
+      }
+
+      @media (max-width: 1000px) {
+        margin: 0 5%;
       }
     }
   }

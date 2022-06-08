@@ -50,6 +50,11 @@ footer .wrapFooterItems .footerItem:hover {
   cursor: pointer;
   color: #ff79da;
 }
+@media (max-width: 1000px) {
+  footer {
+    margin-top: 0;
+  }
+}
 
 header {
   display: flex;
@@ -81,11 +86,17 @@ header .wrapCity {
 .content {
   margin: 0 10%;
 }
+@media (max-width: 1000px) {
+  .content {
+    margin: 0;
+  }
+}
 .content h2 {
   font-size: 1.25rem;
 }
 .content .headDescription {
-  margin: 15px 0;
+  padding: 20px;
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,10 +121,23 @@ header .wrapCity {
 .content .headDescription button:hover {
   transform: scale(1.05);
 }
+@media (max-width: 1000px) {
+  .content .headDescription {
+    background-color: rgba(0, 0, 0, 0.0274509804);
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 .content .headMenu {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+}
+@media (max-width: 1000px) {
+  .content .headMenu {
+    margin: 0 8%;
+    margin-bottom: 4rem;
+  }
 }
 .content .headMenu h2 {
   margin-bottom: 20px;
@@ -165,8 +189,19 @@ header .wrapCity {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 1000px) {
+  .content .restaurants {
+    background-color: rgba(0, 0, 0, 0.0274509804);
+    padding: 3rem 0;
+  }
+}
 .content .restaurants h2 {
   margin-bottom: 20px;
+}
+@media (max-width: 1000px) {
+  .content .restaurants h2 {
+    margin-left: 5%;
+  }
 }
 .content .restaurants .wrapCards {
   display: flex;
@@ -251,6 +286,11 @@ header .wrapCity {
     flex-direction: row;
   }
 }
+@media (max-width: 1000px) {
+  .content .restaurants .wrapCards {
+    margin: 0 5%;
+  }
+}
 
 .menu01 header i {
   position: absolute;
@@ -262,34 +302,44 @@ header .wrapCity {
 .menu01 header i:hover {
   transform: scale(1.1);
 }
-.menu01 section {
+.menu01 .contentMenu {
   margin: 0;
 }
-.menu01 section img {
+@media (max-width: 1000px) {
+  .menu01 .contentMenu {
+    background-color: #e8edea;
+  }
+}
+.menu01 .contentMenu img {
   height: 350px;
   width: 100%;
   object-fit: cover;
 }
-.menu01 .headMenu {
+.menu01 .contentMenu .headMenu {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   position: relative;
   top: -55px;
   background-color: #e8edea;
-  margin: 0 10%;
-  padding: 20px;
+  margin: 0 8%;
+  padding: 20px 15px;
   border-radius: 20px 20px 0 0;
 }
-.menu01 .headMenu .headTitle {
+@media (max-width: 1000px) {
+  .menu01 .contentMenu .headMenu {
+    margin: 0;
+  }
+}
+.menu01 .contentMenu .headMenu .headTitle {
   display: flex;
   justify-content: space-between;
 }
-.menu01 .headMenu .headTitle i {
+.menu01 .contentMenu .headMenu .headTitle i {
   position: relative;
   font-size: 2rem;
 }
-.menu01 .headMenu .headTitle .fa-solid {
+.menu01 .contentMenu .headMenu .headTitle .fa-solid {
   position: absolute;
   right: 0;
   opacity: 0;
@@ -301,14 +351,14 @@ header .wrapCity {
   background-clip: text;
   margin-right: 20px;
 }
-.menu01 .headMenu .headTitle .fa-solid:hover {
+.menu01 .contentMenu .headMenu .headTitle .fa-solid:hover {
   opacity: 1;
 }
-.menu01 .headMenu h1 {
+.menu01 .contentMenu .headMenu h1 {
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
-.menu01 .headMenu button {
+.menu01 .contentMenu .headMenu button {
   font-weight: 700;
   padding: 12px 20px;
   margin-top: 10px;
@@ -322,39 +372,39 @@ header .wrapCity {
   color: #fff;
   background: linear-gradient(to bottom, #ff79da 5%, #9356dc 100%);
 }
-.menu01 .headMenu button:hover {
+.menu01 .contentMenu .headMenu button:hover {
   transform: scale(1.05);
 }
-.menu01 .headMenu .menuList {
+.menu01 .contentMenu .headMenu .menuList {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: stretch;
   gap: 20px;
   justify-content: space-between;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
 }
 @media (min-width: 1000px) {
-  .menu01 .headMenu .menuList {
+  .menu01 .contentMenu .headMenu .menuList {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-.menu01 .headMenu .menuList .menuWrap {
+.menu01 .contentMenu .headMenu .menuList .menuWrap {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
 }
-.menu01 .headMenu .menuList .menuWrap h2 {
+.menu01 .contentMenu .headMenu .menuList .menuWrap h2 {
   margin-bottom: 5px;
 }
-.menu01 .headMenu .menuList .menuWrap h2::after {
+.menu01 .contentMenu .headMenu .menuList .menuWrap h2::after {
   content: "";
   display: block;
   width: 55px;
   border-bottom: 5px solid #92d8c7;
   padding-top: 2px;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc {
   animation: 1s ease-in-out 0s 1 slide;
   animation-fill-mode: both;
   display: flex;
@@ -366,13 +416,13 @@ header .wrapCity {
   box-shadow: 0px 0px 10px -2px #000000;
   border-radius: 10px;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc:nth-child(2) {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc:nth-child(2) {
   animation-delay: 150ms;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc:nth-child(3) {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc:nth-child(3) {
   animation-delay: 300ms;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc:nth-child(4) {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc:nth-child(4) {
   animation-delay: 450ms;
 }
 @keyframes slide {
@@ -385,37 +435,37 @@ header .wrapCity {
     opacity: 100%;
   }
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuGroup {
   overflow: hidden;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 12px;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup:hover + .menuSelection {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuGroup:hover + .menuSelection {
   margin-right: 0;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup:hover + .menuSelection i {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuGroup:hover + .menuSelection i {
   transform: rotate(0);
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText {
   overflow: hidden;
   width: -webkit-fill-available;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText p {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText p:nth-of-type(1) {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuText p:nth-of-type(1) {
   font-weight: bold;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuSpan {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuGroup .menuSpan {
   font-weight: bold;
   position: relative;
   top: 20px;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuSelection {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuSelection {
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -429,7 +479,7 @@ header .wrapCity {
   flex-shrink: 0;
   border-radius: 0 10px 10px 0;
 }
-.menu01 .headMenu .menuList .menuWrap .menuDesc .menuSelection i {
+.menu01 .contentMenu .headMenu .menuList .menuWrap .menuDesc .menuSelection i {
   transition: ease-in-out 0.3s;
   transform: rotate(-250deg);
 }

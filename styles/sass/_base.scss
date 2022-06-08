@@ -59,4 +59,8 @@ footer {
       color: var.$secondary;
     }
   }
+
+  @media (max-width: 1000px) {
+    margin-top: 0;
+  }
 }
